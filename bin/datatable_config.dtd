@@ -1,0 +1,26 @@
+<!ELEMENT dataTableConfig (
+	tableName,
+	unique_column,
+	unique_sql,
+	columns
+)>
+<!ELEMENT unique_column EMPTY>
+<!ATTLIST unique_column value CDATA #REQUIRED>
+
+<!ELEMENT columns (
+	column+
+)>
+<!ELEMENT column EMPTY>
+<!-- 数据表的字段名称 -->
+<!ATTLIST column columnName ID #REQUIRED>
+
+<!-- 对应的原始数据（页面萃取数据）的key值或者字段值-->
+<!ATTLIST column srcKey ID #IMPLIED>
+
+<!-- 字段类型：取值为java内的数据类型，如：java.lang.String-->
+<!ATTLIST column columnType CDATA #IMPLIED>
+
+<!-- 默认值 ，如：sysdate, 0， 1，
+	注意：对于数据库表中数据类型为varchar(char/varchar2)类型时候，
+	指定的默认值需要加单引号如：'testdata', 'mygood' -->
+<!ATTLIST column defaultValue CDATA #IMPLIED>

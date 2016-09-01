@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE dataTableConfig SYSTEM "datatable_config.dtd" >
+<dataTableConfig>
+	<tableName>xxxxx</tableName>
+	<columns>
+		<column columnName="x" columnType="java.lang.String" srcKey="姓名" />	
+		<column columnName="crtDate" columnType="java.lang.String"  defaultValue="sysdate" />	
+		<column columnName="state" columnType="java.lang.String"  defaultValue="'1'" />	
+	</columns>
+</dataTableConfig>
